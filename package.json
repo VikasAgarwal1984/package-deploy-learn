@@ -1,32 +1,48 @@
 {
   "name": "@VikasAgarwal1984/package-deploy-learn",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "component library",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/VikasAgarwal1984"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "source": "src/index.ts",
   "files": [
     "dist"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rollup -c"
+    "clean": "rimraf ./dist",
+    "prerollup": "npm run clean",
+    "rollup": "rollup -c",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^18.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.3",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@rollup/plugin-typescript": "^8.3.1",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^13.0.0",
+    "@types/jest": "^27.4.1",
     "@types/react": "^17.0.43",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "jest-transform-scss": "^1.0.8",
+    "rimraf": "^3.0.2",
     "rollup": "^2.70.1",
     "rollup-plugin-dts": "^4.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.49.11",
+    "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
   }
 }
