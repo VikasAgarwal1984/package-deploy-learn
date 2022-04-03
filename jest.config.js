@@ -1,12 +1,13 @@
 module.exports = {
-  roots: ["./src"],
+  roots: ["<rootDir>"],
+  moduleDirectories: ["node_modules", "src"],
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["./jest.setup.ts"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   moduleFileExtensions: ["ts", "tsx", "js", "css"],
-  testPathIgnorePatterns: ["node_modules"],
+  testPathIgnorePatterns: ["<rootDir>/node_modules"],
   transform: {
     "^.+\\.tsx?$": "ts-jest",
-    "^.+\\.css$": "jest-transform-scss"
+    "^.+\\.(css|less|sass|scss)$": "jest-transform-css"
   },
   testMatch: ["**/*.test.(ts|tsx)"],
   moduleNameMapper: {

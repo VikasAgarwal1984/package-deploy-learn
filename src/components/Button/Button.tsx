@@ -5,8 +5,9 @@ export interface ButtonProps {
 }
 
 import buttonStyle from "./Button.module.css";
+// const buttonStyle = {primary: "abc"}
 
-console.log(buttonStyle);
+console.log('buttonStyle', buttonStyle);
 
 export const Button = (props: ButtonProps) => {
   return (
