@@ -1,7 +1,10 @@
 {
-  "name": "package-deploy-learn",
+  "name": "@VikasAgarwal1984/package-deploy-learn",
   "version": "0.0.1",
   "description": "component library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/VikasAgarwal1984"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
